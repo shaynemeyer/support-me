@@ -14,6 +14,7 @@ import {
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import Image from "next/image";
 import TeamDistributionChart from "./TeamDistributionChart";
+import SupportTicketsResolved from "./SupportTicketsResolved";
 
 const teamLeaders = [
   {
@@ -119,7 +120,7 @@ function TeamsStats() {
               <PieChart />
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pb-0">
             <TeamDistributionChart />
           </CardContent>
         </Card>
@@ -131,7 +132,9 @@ function TeamsStats() {
             <span>Support tickets resolved</span>
           </CardTitle>
         </CardHeader>
-        <CardContent className="pl-0">line grap</CardContent>
+        <CardContent className="pl-0">
+          <SupportTicketsResolved />
+        </CardContent>
       </Card>
     </>
   );
