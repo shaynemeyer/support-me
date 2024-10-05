@@ -1,5 +1,5 @@
 "use client";
-import { Divide } from "lucide-react";
+
 import {
   ResponsiveContainer,
   BarChart,
