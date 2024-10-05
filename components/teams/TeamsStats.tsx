@@ -1,4 +1,4 @@
-import { ListChecksIcon, StarIcon, UsersIcon } from "lucide-react";
+import { ListChecksIcon, PieChart, StarIcon, UsersIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import {
 } from "../ui/tooltip";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import Image from "next/image";
+import TeamDistributionChart from "./TeamDistributionChart";
 
 const teamLeaders = [
   {
@@ -113,9 +114,14 @@ function TeamsStats() {
         </Card>
         <Card className="flex flex-col">
           <CardHeader className="pb-2">
-            <CardTitle className="text-base">Team distribution</CardTitle>
+            <CardTitle className="text-base flex justify-between items-center">
+              <span>Team distribution</span>
+              <PieChart />
+            </CardTitle>
           </CardHeader>
-          <CardContent className="flex gap-2 items-center"></CardContent>
+          <CardContent>
+            <TeamDistributionChart />
+          </CardContent>
         </Card>
       </div>
       <Card className="my-4">
