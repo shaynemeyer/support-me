@@ -1,4 +1,4 @@
-import EmployeeStats from "@/components/stats/EmployeeStats";
+import EmployeeStats from "@/components/employees/EmployeeStats";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function DashboardPage() {
