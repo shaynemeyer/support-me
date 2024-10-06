@@ -1,9 +1,11 @@
+import { columns, Employee } from "@/components/employees/Columns";
+import { DataTable } from "@/components/tables/DataTable";
 import { CardContent } from "@/components/ui/card";
 import { setTimeout } from "timers/promises";
 async function EmployeesPage() {
   await setTimeout(4000);
 
-  const employees = [
+  const employees: Employee[] = [
     {
       id: 1,
       firstName: "Colin",
@@ -72,6 +74,10 @@ async function EmployeesPage() {
     },
   ];
 
-  return <CardContent>foo</CardContent>;
+  return (
+    <CardContent>
+      <DataTable data={employees} columns={columns} />
+    </CardContent>
+  );
 }
 export default EmployeesPage;
